@@ -141,9 +141,7 @@ export function useProjects() {
   const restoreDefaults = useCallback(() => {
     const defaults = resetStoredProjects();
     setProjects(defaults);
-    if (defaults.length > 0) {
-      setActiveProjectId(defaults[0].id);
-    }
+    setActiveProjectId(defaults.length > 0 ? defaults[0].id : null);
   }, []);
 
   const exportBackup = useCallback(() => {
