@@ -50,8 +50,8 @@ export function SettingsModal({
         onImport(text);
         setSuccessMsg("Backup restaurado com sucesso no Palácio da Memória!");
         setErrorMsg("");
-      } catch (err: any) {
-        setErrorMsg(err?.message || "Erro ao ler o arquivo JSON.");
+      } catch (err: unknown) {
+        setErrorMsg(err instanceof Error ? err.message : "Erro ao ler o arquivo JSON.");
         setSuccessMsg("");
       }
     };
