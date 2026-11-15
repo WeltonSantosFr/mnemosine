@@ -11,11 +11,10 @@ export function getStoredProjects(): Project[] {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(DEFAULT_PROJECTS));
       return DEFAULT_PROJECTS;
     }
     const parsed = JSON.parse(raw);
-    if (Array.isArray(parsed) && parsed.length > 0) {
+    if (Array.isArray(parsed)) {
       return parsed;
     }
     return DEFAULT_PROJECTS;
@@ -37,7 +36,7 @@ export function saveStoredProjects(projects: Project[]): void {
 
 export function resetStoredProjects(): Project[] {
   if (typeof window !== "undefined") {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(DEFAULT_PROJECTS));
+    localStorage.removeItem(STORAGE_KEY);
   }
   return DEFAULT_PROJECTS;
 }

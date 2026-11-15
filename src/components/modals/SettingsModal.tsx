@@ -62,11 +62,11 @@ export function SettingsModal({
   const handleResetConfirm = () => {
     if (
       window.confirm(
-        "Tem certeza que deseja restaurar os projetos padrão (Maestrum, Nipponic, Dragon Studio)? Suas alterações personalizadas não exportadas serão substituídas."
+        "Tem certeza que deseja limpar todas as pastas e serviços? Essa ação removerá os dados salvos localmente no navegador."
       )
     ) {
       onReset();
-      setSuccessMsg("Projetos restaurados para os valores padrão com sucesso!");
+      setSuccessMsg("Dados locais limpos com sucesso!");
       setErrorMsg("");
     }
   };
@@ -183,19 +183,19 @@ export function SettingsModal({
             <div className="flex items-center justify-between">
               <div>
                 <h5 className="text-xs font-serif text-stone-200 font-semibold">
-                  Restaurar Padrão de Fábrica
+                  Limpar Dados Locais
                 </h5>
                 <p className="text-[11px] text-stone-500">
-                  Restaura os dados originais (Maestrum, Nipponic, Dragon Studio).
+                  Remove todas as pastas de projetos e serviços salvos no navegador.
                 </p>
               </div>
               <button
                 type="button"
                 onClick={handleResetConfirm}
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-red-500/40 text-red-400 hover:bg-red-950/40 hover:border-red-500 transition-colors text-xs"
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-red-500/40 text-red-400 hover:bg-red-950/40 hover:border-red-500 transition-colors text-xs cursor-pointer"
               >
                 <RotateCcw className="w-3.5 h-3.5" />
-                <span>Restaurar</span>
+                <span>Limpar Tudo</span>
               </button>
             </div>
           </div>

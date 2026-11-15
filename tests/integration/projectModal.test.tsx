@@ -32,7 +32,7 @@ describe('Integração: ProjectModal', () => {
 
     expect(screen.getByText('Nova Pasta de Projeto')).toBeInTheDocument();
 
-    const input = screen.getByPlaceholderText(/Ex: Maestrum, Nipponic, Dragon Studio.../i);
+    const input = screen.getByPlaceholderText(/Ex: Infraestrutura, Web Apps, Ferramentas.../i);
     await user.type(input, 'Mnemosine Pro');
 
     const submitBtn = screen.getByRole('button', { name: /criar pasta/i });
