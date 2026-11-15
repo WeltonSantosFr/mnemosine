@@ -1,0 +1,14 @@
+services:
+  mnemosine:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mnemosine
+    image: mnemosine:latest
+    restart: unless-stopped
+    ports:
+      - "3005:3005"
+    environment:
+      - NODE_ENV=production
+      - PORT=3005
+      - HOSTNAME=0.0.0.0
