@@ -82,7 +82,7 @@ export function ProjectModal({
             <input
               type="text"
               required
-              placeholder="Ex: Maestrum, Nipponic, Dragon Studio..."
+              placeholder="Ex: Infraestrutura, Web Apps, Ferramentas..."
               value={name}
               onChange={(e) => {
                 setName(e.target.value);
