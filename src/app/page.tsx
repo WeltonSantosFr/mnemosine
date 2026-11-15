@@ -249,22 +249,16 @@ export default function MnemosineDashboard() {
                     Nenhum projeto cadastrado
                   </h3>
                   <p className="text-xs sm:text-sm text-stone-400 max-w-md mt-1 mb-6">
-                    Crie sua primeira pasta de projeto ou restaure os dados demonstrativos nas configurações.
+                    Crie sua primeira pasta de projeto para começar a organizar seus serviços e links de infraestrutura.
                   </p>
                   <div className="flex items-center gap-3">
                     <button
                       type="button"
                       onClick={handleOpenNewProject}
-                      className="px-5 py-2.5 rounded-xl bg-[#d4af37] text-black font-semibold text-xs hover:bg-[#ebce67] transition-all"
+                      className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#d4af37] to-[#c59f2d] text-black font-semibold text-xs hover:brightness-110 shadow-[0_0_15px_rgba(212,175,55,0.3)] transition-all cursor-pointer"
                     >
-                      Criar Primeira Pasta
-                    </button>
-                    <button
-                      type="button"
-                      onClick={restoreDefaults}
-                      className="px-5 py-2.5 rounded-xl bg-[#18161d] border border-[#3e3423] text-stone-300 text-xs hover:border-[#d4af37]/60 transition-all"
-                    >
-                      Restaurar Projetos Padrão
+                      <Plus className="w-4 h-4" />
+                      <span>Criar Primeira Pasta</span>
                     </button>
                   </div>
                 </div>
